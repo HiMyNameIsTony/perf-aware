@@ -27,7 +27,7 @@ int main( int argc, const char** argv ) {
     printf( "bytes read: %d\n", num_bytes_read );
     if( byte[0] == MOVW_FROM_REG ) {
         if( byte[1] & 0xC0 == MOD_REG ) {
-            printf("mov %s, %s\n", REGW[byte[1]&0x03], REGW[(byte[1]&0x38)>>3]);
+            printf( "mov %s, %s\n", REGW[byte[1] & 0x03], REGW[( byte[1] & 0x38 ) >> 3] );
         } else {
             printf( "Unknown MOD code.\n" );
             return -4;
